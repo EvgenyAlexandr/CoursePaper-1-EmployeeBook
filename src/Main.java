@@ -31,6 +31,9 @@ public class Main {
         // Средняя з/п
         System.out.println("Среднее З/П: " + getAverageSalary(employee));
 
+        System.out.println("\nСписок сотрудников");
+        printAllNames(employee);
+
     }
 
 
@@ -74,5 +77,11 @@ public class Main {
             countEmployee++;
         }
         return getSalarySum(emp) / countEmployee;
+    }
+
+    public static void printAllNames(Employee[] emp){
+        for (int i = 0; i < emp.length && emp[i] != null; i ++) {
+            System.out.println(emp[i].getFullName());
+        }
     }
 }
