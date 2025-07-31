@@ -25,11 +25,11 @@ public class Main {
         System.out.println();
         System.out.println("Минимальная З/П : " + getMinSalart(employee));
 
-        // Максимальная ЗП
-        System.out.println();
+        // Максимальная з/п
         System.out.println("Максимальная З/П: " + getMaxSalart(employee));
 
-
+        // Средняя з/п
+        System.out.println("Среднее З/П: " + getAverageSalary(employee));
 
     }
 
@@ -68,5 +68,11 @@ public class Main {
         return max;
     }
 
-
+    public static double getAverageSalary(Employee[] emp){
+        int countEmployee = 0;
+        for (int i = 0; i < emp.length && emp[i] != null; i ++) {
+            countEmployee++;
+        }
+        return getSalarySum(emp) / countEmployee;
+    }
 }
