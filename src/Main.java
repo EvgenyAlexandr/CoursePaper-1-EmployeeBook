@@ -31,9 +31,8 @@ public class Main {
         // Средняя з/п
         System.out.println("Среднее З/П: " + getAverageSalary(employee));
 
-        System.out.println("\nСписок сотрудников");
+        System.out.println("\nФИО сотрудников:");
         printAllNames(employee);
-
     }
 
 
