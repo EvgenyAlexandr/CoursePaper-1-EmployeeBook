@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Employee {
     private final String fullName;      // ФИО Сотрудника
     private int department;             // Номер Отдела
@@ -46,7 +48,23 @@ public class Employee {
         this.salary = salary;
     }
 
+    @Override
+    public String toString() {
+        return "Запись № " + id + ", ФИО:\"" + fullName + "\", Отдел " + department + ", Зарплата: " + salary;
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return id == employee.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
 
 }
