@@ -72,5 +72,27 @@ public class EmployeeBook {
         }
     }
 
+    // Получение сотрудника по id
+    public Employee getEmployeeById(int id) {
+        for (int i = 0; i < size; i++) {
+            if (employees[i] != null && employees[i].getId() == id) {
+                return employees[i];
+            }
+        }
+        return null;
+    }
+
+    // Удаление сотрудника по id
+    public boolean removeEmployee(int id) {
+        for (int i = 0; i < size; i++) {
+            if (employees[i] != null && employees[i].getId() == id) {
+                // Сдвигаем все элементы после удаляемого
+                System.arraycopy(employees, i + 1, employees, i, size - i - 1);
+                employees[--size] = null;
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
