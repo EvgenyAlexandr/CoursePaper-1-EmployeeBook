@@ -50,6 +50,18 @@ public class Main {
         System.out.println("Добавлен: " + employeeBook.addEmployee("Сотрудник 4", 4, 60_000));
         System.out.println("Добавлен: " + employeeBook.addEmployee("Сотрудник 5", 5, 50_000));
 
+        // Выводим всех сотрудников
+        System.out.println("\nВсе сотрудники:");
+        employeeBook.printAllEmployees();
+
+        // Сумма затрат на з/п в месяц
+        System.out.println("\nСумма затрат на зарплаты: " + employeeBook.calculateTotalSalary());
+
+        // Статистика по з/п
+        System.out.println("Сотрудник с минимальной зарплатой: " + employeeBook.findEmployeeWithMinSalary());
+        System.out.println("Сотрудник с максимальной зарплатой: " + employeeBook.findEmployeeWithMaxSalary());
+        System.out.println("Средняя зарплата: " + employeeBook.calculateAverageSalary());
+
 
 
     }
