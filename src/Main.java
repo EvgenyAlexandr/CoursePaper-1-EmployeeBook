@@ -1,43 +1,56 @@
 public class Main {
     public static void main(String[] args) {
 
-        // Создаем книгу сотрудников с вместимостью 10 записей
-        Employee[] employee = new Employee [10];
+//        // Создаем книгу сотрудников с вместимостью 10 записей
+//        Employee[] employee = new Employee [10];
+//
+//        // Добавляем сотрудников
+//        employee[0] = new Employee("Великий и ужасный Босс", 1, 100_000);
+//        employee[1] = new Employee("Сотрудник 1", 1, 90_000);
+//        employee[2] = new Employee("Сотрудник 2", 2, 20_000);
+//        employee[3] = new Employee("Сотрудник 3", 3, 30_000);
+//        employee[4] = new Employee("Сотрудник 4", 4, 40_000);
+//        employee[5] = new Employee("Сотрудник 5", 5, 50_000);
 
+//        // Отображаем всех сотрудников
+//        System.out.println("Все сотрудники:");
+//        printAll(employee);
+//
+//        // Сумма затрат на з/п в месяц
+//        System.out.println();
+//        System.out.println("Сумма З/П в месяц: " + getSalarySum(employee));
+//
+//        // Минимальная з/п
+//        System.out.println();
+//        System.out.println("Минимальная З/П : " + getMinSalart(employee));
+//
+//        // Максимальная з/п
+//        System.out.println("Максимальная З/П: " + getMaxSalart(employee));
+//
+//        // Средняя з/п
+//        System.out.println("Среднее З/П: " + getAverageSalary(employee));
+//
+//        // ФИО всех сотрудников
+//        System.out.println("\nФИО сотрудников:");
+//        printAllNames(employee);
+//
+//        //Индексация з/п
+//        System.out.println("\nИндексация з/п:");
+//        indexationSalary(employee, 10);
+
+        // Создаем книгу сотрудников с вместимостью 10 записей
+        EmployeeBook employeeBook = new EmployeeBook(10);
 
         // Добавляем сотрудников
-        employee[0] = new Employee("Великий и ужасный Босс", 1, 100_000);
-        employee[1] = new Employee("Сотрудник 1", 1, 90_000);
-        employee[2] = new Employee("Сотрудник 2", 2, 20_000);
-        employee[3] = new Employee("Сотрудник 3", 3, 30_000);
-        employee[4] = new Employee("Сотрудник 4", 4, 40_000);
-        employee[5] = new Employee("Сотрудник 5", 5, 50_000);
+        System.out.println("Добавление сотрудников:");
+        System.out.println("Добавлен: " + employeeBook.addEmployee("Великий и ужасный Босс", 1, 100_000));
+        System.out.println("Добавлен: " + employeeBook.addEmployee("Сотрудник 1", 1, 90_000));
+        System.out.println("Добавлен: " + employeeBook.addEmployee("Сотрудник 2", 2, 80_000));
+        System.out.println("Добавлен: " + employeeBook.addEmployee("Сотрудник 3", 3, 70_000));
+        System.out.println("Добавлен: " + employeeBook.addEmployee("Сотрудник 4", 4, 60_000));
+        System.out.println("Добавлен: " + employeeBook.addEmployee("Сотрудник 5", 5, 50_000));
 
-        // Отображаем всех сотрудников
-        System.out.println("Все сотрудники:");
-        printAll(employee);
 
-        // Сумма затрат на з/п в месяц
-        System.out.println();
-        System.out.println("Сумма З/П в месяц: " + getSalarySum(employee));
-
-        // Минимальная з/п
-        System.out.println();
-        System.out.println("Минимальная З/П : " + getMinSalart(employee));
-
-        // Максимальная з/п
-        System.out.println("Максимальная З/П: " + getMaxSalart(employee));
-
-        // Средняя з/п
-        System.out.println("Среднее З/П: " + getAverageSalary(employee));
-
-        // ФИО всех сотрудников
-        System.out.println("\nФИО сотрудников:");
-        printAllNames(employee);
-
-        //Индексация з/п
-        System.out.println("\nИндексация з/п:");
-        indexationSalary(employee, 10);
 
     }
 
